@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #1d1d1d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4vw;
+        }
+
+        .box {
+            height: 300px;
+            width: 700px;
+            border-radius: 24px;
+            border: 1px solid whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 3rem;
+        }
+
+        .icons {
+            /* padding: 2rem 2rem; */
+            height: 80px;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            margin: 1.2vw;
+            background-color: aliceblue;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        i {
+            font-size: 2.5rem;
+            font-weight: 300;
+            position: relative;
+
+        }
+
+        .icons:hover> li{
+            transition: all ease .8s;
+            transform: rotateY(360deg);
+        }
+
+       
+
+        li {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            height: 100%;
+            width: 100%;
+            transition: all ease .4s;
+            /* background-color: rgb(156, 245, 141); */
+        }
+
+        li:hover::before {
+            transition: all ease .4s;
+            top: 0;
+        }
+        li:nth-child(1):hover::before{
+            background-color: aqua;
+        }
+        li:nth-child(2):hover::before{
+            background-color: aqua;
+        }
+        li:nth-child(3):hover::before{
+            background-color: aqua;
+        }
+        li:nth-child(4):hover::before{
+            background-color: aqua;
+        }
+
+        li:hover > i{
+            color: aliceblue;
+            border-radius: 50%;
+        }
+
+        button{
+            padding: 1rem 2rem;
+            border: 1px solid #c4c1c1;
+            background-color: rgba(216, 112, 147, 0.847);
+            color: #c4c1c1;
+            border-radius: 8px;
+            outline: none;
+            font-weight: 600;
+            font-size:1.8rem;
+            transition: all ease .4s;
+            cursor: pointer;
+        }
+        button:hover{
+            transition: all ease .4s;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="icons">
+            <li> <i class="ri-facebook-fill"></i> </li>
+        </div>
+        <div class="icons">
+            <li> <i class="ri-instagram-fill"></i> </li>
+        </div>
+        <div class="icons">
+            <li> <i class="ri-twitter-fill"></i> </li>
+        </div>
+        <div class="icons">
+            <li> <i class="ri-linkedin-line"></i> </li>
+        </div>
+    </div>
+
+
+    <button>Hover me</button>
+
+</body>
+
+</html>
