@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #typing-text{
+            font-size: 15rem;
+            font-family: monospace;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="typing-text">
+
+    </div>
+
+    <script>
+        const text = "Welcome to My Interactive Website!";
+        let index = 0;
+
+        function typeText() {
+            if (index < text.length) {
+                document.getElementById("typing-text").textContent += text.charAt(index);
+                index++;
+                setTimeout(typeText, 100);
+            }
+        }
+
+        window.onload = () => setTimeout(typeText, 500);
+
+    </script>
+</body>
+
+</html>
